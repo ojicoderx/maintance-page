@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acaw - Maintenance Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+      z-index: 10;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #ff6a00, #ee0979, #9c16bd, #1698bd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555;
+      font-family: Arial;
+      font-weight: bold;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ffffff;
+      background: linear-gradient(90deg, #4facfe, #560ecdab, #560ecdab);
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 2.5s ease-out;
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .animation-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(79, 172, 254, 0.3);
+      animation: moveCircle 10s infinite ease-in-out;
+    }
+
+    .circle:nth-child(1) { width: 80px; height: 80px; top: 10%; left: 15%; animation-delay: 0s; }
+    .circle:nth-child(2) { width: 100px; height: 100px; top: 25%; left: 70%; animation-delay: 2s; }
+    .circle:nth-child(3) { width: 150px; height: 150px; top: 60%; left: 30%; animation-delay: 4s; }
+    .circle:nth-child(4) { width: 50px; height: 50px; top: 80%; left: 85%; animation-delay: 6s; }
+    .circle:nth-child(5) { width: 120px; height: 120px; top: 40%; left: 50%; animation-delay: 8s; }
+    .circle:nth-child(6) { width: 60px; height: 60px; bottom: 10%; right: 20%; animation-delay: 10s; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes moveCircle {
+      0%, 100% {
+        transform: translateY(0) translateX(0);
+      }
+      50% {
+        transform: translateY(-20px) translateX(10px);
+      }
+    }
+
+    .particle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: #4facfe;
+      border-radius: 50%;
+      animation: floatParticle 4s infinite ease-in-out;
+    }
+
+    .particle:nth-child(7) { top: 20%; left: 10%; animation-delay: 0s; }
+    .particle:nth-child(8) { top: 50%; left: 40%; animation-delay: 1s; }
+    .particle:nth-child(9) { top: 80%; left: 60%; animation-delay: 2s; }
+    .particle:nth-child(10) { top: 30%; left: 80%; animation-delay: 3s; }
+    .particle:nth-child(11) { top: 70%; left: 20%; animation-delay: 4s; }
+
+    @keyframes floatParticle {
+      0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translateY(-10px) translateX(10px);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Maintenance!</h1>
+    <p>Kami sedang meningkatkan kualitas layanan. Silakan kembali lagi nanti.</p>
+    <a href="https://wa.me/62831708011193" class="button">Hubungi Kami</a>
+  </div>
+
+  <div class="animation-wrapper">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+</body>
+</html>
